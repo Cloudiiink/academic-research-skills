@@ -4,7 +4,7 @@ Single source of truth for all modes across the ARS suite. **25 modes** across 4
 
 When adding or modifying modes, update this file first — SKILL.md files and CLAUDE.md should reference this registry.
 
-Last updated: v3.9.4.2 (2026-05-19)
+Last updated: v3.9.5 (2026-05-30)
 
 ---
 
@@ -20,12 +20,13 @@ Last updated: v3.9.4.2 (2026-05-19)
 | `socratic` | Originality | Research Plan Summary + INSIGHT collection | Very High | "guide my research", "help me think through", "I'm not sure what to research" |
 | `systematic-review` | Fidelity | PRISMA 2020 report, 5,000-15,000 words | Medium | "systematic review", "meta-analysis", "PRISMA" |
 
-## academic-paper (10 modes)
+## academic-paper (11 modes)
 
 | Mode | Spectrum | Output | Oversight | Triggers |
 |------|----------|--------|-----------|----------|
 | `full` | Balanced | Complete paper draft (IMRaD or domain-appropriate) | High | "write a paper", "academic paper", "research paper" |
 | `plan` | Originality | Chapter Plan + INSIGHT collection (Socratic) | Very High | "guide my paper", "help me plan", "step by step paper" |
+| `guided-writing` | Originality | Complete draft via mentor-guided section-by-section drafting | Very High | "guided writing", "write with me", "help me draft", "guide my drafting", "mentor mode writing", "引導我寫", "一起寫論文", "導師模式", "陪寫論文", "逐段寫", "引导我写", "一起写论文", "导师模式", "陪写论文", "逐段写" |
 | `outline-only` | Balanced | Detailed outline + evidence map | High | "paper outline", "just need an outline" |
 | `revision` | Fidelity | Revised draft + point-by-point R&R responses | High | "revise paper", "incorporate reviewer feedback" |
 | `revision-coach` | Balanced | Revision Roadmap + Response Letter Skeleton | Medium | "parse reviews", "I got reviewer comments" |

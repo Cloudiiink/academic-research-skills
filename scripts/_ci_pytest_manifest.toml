@@ -81,3 +81,19 @@ args = ["-k", "integration or (synthetic and supersession)"]
 [[pytest]]
 id = "v3.6.7-wrapper-e2e"
 path = "scripts/test_run_codex_audit_e2e.py"
+
+[[pytest]]
+id = "guided-writing-protocol"
+path = "scripts/test_guided_mode_protocol.py"
+
+[[pytest]]
+id = "guided-writing-mentor"
+path = "scripts/test_guided_mentor_agent.py"
+
+[[pytest]]
+id = "guided-writing-reviewer"
+path = "scripts/test_guided_reviewer_agent.py"
+
+[[pytest]]
+id = "guided-writing-routing"
+path = "scripts/test_guided_routing.py"

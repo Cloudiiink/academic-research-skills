@@ -78,6 +78,10 @@ resume_from_passport=<hash> [stage=<n>] [mode=<m>]
 
 **English**: academic pipeline, research to paper, full paper workflow, paper pipeline, end-to-end paper, research-to-publication, complete paper workflow
 
+**繁體中文**: 學術流程, 研究到論文, 完整論文流程, 論文流程, 端到端論文, 研究到發表, 完整學術流程
+
+**简体中文**: 学术流程, 研究到论文, 完整论文流程, 论文流程, 端到端论文, 研究到发表, 完整学术流程
+
 ### Non-Trigger Scenarios
 
 | Scenario | Skill to Use |

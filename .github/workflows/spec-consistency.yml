@@ -149,6 +149,9 @@ jobs:
       - name: Validate corpus consumer protocol (v3.6.5+)
         run: python3 scripts/check_corpus_consumer_protocol.py
 
+      - name: Validate domain evidence profile documentation surface (#259)
+        run: python3 scripts/check_domain_evidence_profile.py
+
       - name: Check adapter docs up-to-date
         run: python3 scripts/sync_adapter_docs.py --check
 
@@ -336,4 +339,12 @@ jobs:
         env:
           PYTHONPATH: .
         run: python3 -m unittest scripts.test_policy_anchor_disclosure -v
+
+      - name: Validate evals gold sets (#184)
+        # Phase 1a citation-extraction gold subset validator.
+        # Enforces 9 invariants (I1-I7, I9, I10) per
+        # docs/design/2026-05-21-v3.10-184-extend-eval-harness-spec.md.
+        env:
+          PYTHONPATH: .
+        run: python3 -m scripts.check_evals_gold_set evals/gold/citation_extraction
 

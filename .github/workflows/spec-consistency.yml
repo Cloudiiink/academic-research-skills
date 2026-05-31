@@ -348,3 +348,6 @@ jobs:
           PYTHONPATH: .
         run: python3 -m scripts.check_evals_gold_set evals/gold/citation_extraction
 
+      - name: "Check guided-writing mode protocol lint"
+        run: python3 scripts/check_guided_mode_protocol.py
+

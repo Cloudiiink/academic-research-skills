@@ -54,6 +54,8 @@ Guide my research on the impact of declining birth rates on private universities
 
 **繁體中文**: 研究, 深度研究, 文獻回顧, 文獻探討, 系統性回顧, 後設分析, 證據綜整, 事實查核, 研究方法, 學術分析, 政策分析, 引導我的研究, 幫我釐清, 監測這個主題, 設定追蹤
 
+**简体中文**: 研究, 深度研究, 文献回顾, 文献探讨, 系统性回顾, 元分析, 证据综合, 事实查核, 研究方法, 学术分析, 政策分析, 引导我的研究, 帮我厘清, 监测这个主题, 设定追踪
+
 ### Socratic Mode Activation
 
 Activate `socratic` mode when the user's **intent** matches any of the following patterns, **regardless of language**. Detect meaning, not exact keywords.

@@ -93,3 +93,19 @@ path = "scripts/test_check_evals_gold_set.py"
 [[pytest]]
 id = "kong-257-rq-framing-patterns"
 path = "scripts/test_check_rq_framing_patterns.py"
+
+[[pytest]]
+id = "guided-writing-protocol"
+path = "scripts/test_guided_mode_protocol.py"
+
+[[pytest]]
+id = "guided-writing-mentor"
+path = "scripts/test_guided_mentor_agent.py"
+
+[[pytest]]
+id = "guided-writing-reviewer"
+path = "scripts/test_guided_reviewer_agent.py"
+
+[[pytest]]
+id = "guided-writing-routing"
+path = "scripts/test_guided_routing.py"

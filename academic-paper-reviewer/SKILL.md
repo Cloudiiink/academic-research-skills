@@ -46,6 +46,10 @@ Review this paper: [paste paper or provide file]
 
 **English**: review paper, peer review, manuscript review, referee report, review my paper, critique paper, simulate review, editorial review, calibrate reviewer, reviewer calibration, measure reviewer accuracy
 
+**繁體中文**: 審查論文, 同行評審, 手稿審查, 審稿報告, 評審我的論文, 批判論文, 模擬評審, 編輯評審, 校準審稿人, 審稿人校準, 衡量審稿準確度
+
+**简体中文**: 审查论文, 同行评审, 手稿审查, 审稿报告, 评审我的论文, 批判论文, 模拟评审, 编辑评审, 校准审稿人, 审稿人校准, 衡量审稿准确度
+
 ### Non-Trigger Scenarios
 
 | Scenario | Skill to Use |

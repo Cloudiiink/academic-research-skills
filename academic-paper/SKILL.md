@@ -1,9 +1,9 @@
 ---
 name: academic-paper
-description: "12-agent academic paper writing pipeline. 10 modes (full/plan/outline/revision/revision-coach/abstract/lit-review/format-convert/citation-check/disclosure). 6 paper types, 5 citation formats, bilingual abstracts, LaTeX/DOCX-via-Pandoc/PDF output. Style Calibration + Writing Quality Check + Anti-Patterns with IRON RULE markers. Triggers: write paper, academic paper, guide my paper, parse reviews, AI disclosure, 寫論文, 學術論文, 引導我寫論文, 審查意見."
+description: "12-agent academic paper writing pipeline. 11 modes (full/plan/guided-writing/outline/revision/revision-coach/abstract/lit-review/format-convert/citation-check/disclosure). 6 paper types, 5 citation formats, bilingual abstracts, LaTeX/DOCX-via-Pandoc/PDF output. Style Calibration + Writing Quality Check + Anti-Patterns with IRON RULE markers. Triggers: write paper, academic paper, guide my paper, parse reviews, AI disclosure, 寫論文, 學術論文, 引導我寫論文, 審查意見."
 metadata:
-  version: "3.1.2"
-  last_updated: "2026-05-18"
+  version: "3.1.3"
+  last_updated: "2026-05-30"
   status: active
   data_access_level: redacted
   task_type: open-ended
@@ -50,15 +50,30 @@ Write a paper on the impact of declining birth rates on private university manag
 
 ### Trigger Keywords
 
-**English**: write paper, academic paper, paper outline, write abstract, revise paper, literature review paper, check citations, convert to LaTeX, convert format, format paper, conference paper, journal article, thesis chapter, research paper, guide my paper, help me plan my paper, step by step paper, draft manuscript, write methodology, write discussion, parse reviews, revision roadmap, help me with my revision, I got reviewer comments, convert citations
+**English**: write paper, academic paper, paper outline, write abstract, revise paper, literature review paper, check citations, convert to LaTeX, convert format, format paper, conference paper, journal article, thesis chapter, research paper, guide my paper, help me plan my paper, step by step paper, draft manuscript, write methodology, write discussion, parse reviews, revision roadmap, help me with my revision, I got reviewer comments, convert citations, guided writing, write with me, help me draft, guide my drafting, mentor mode writing
 
-**繁體中文**: 寫論文, 學術論文, 論文大綱, 寫摘要, 修改論文, 文獻回顧論文, 檢查引用, 轉 LaTeX, 轉換格式, 研討會論文, 期刊文章, 學位論文, 研究論文, 引導我寫論文, 幫我規劃論文, 逐步寫論文, 寫方法論, 寫討論, 審查意見, 修訂路線圖, 幫我修改, 我收到審查意見, 轉換引用格式
+**繁體中文**: 寫論文, 學術論文, 論文大綱, 寫摘要, 修改論文, 文獻回顧論文, 檢查引用, 轉 LaTeX, 轉換格式, 研討會論文, 期刊文章, 學位論文, 研究論文, 引導我寫論文, 幫我規劃論文, 逐步寫論文, 寫方法論, 寫討論, 審查意見, 修訂路線圖, 幫我修改, 我收到審查意見, 轉換引用格式, 引導我寫, 一起寫論文, 導師模式, 陪寫論文, 逐段寫
+
+**简体中文**: 写论文, 学术论文, 论文大纲, 写摘要, 修改论文, 文献回顾论文, 检查引用, 转 LaTeX, 转换格式, 研讨会论文, 期刊文章, 学位论文, 研究论文, 引导我写论文, 帮我规划论文, 逐步写论文, 写方法论, 写讨论, 审查意见, 修订路线图, 帮我修改, 我收到审查意见, 转换引用格式, 引导我写, 一起写论文, 导师模式, 陪写论文, 逐段写
 
 ### Plan Mode Activation
 
 Activate `plan` mode when the user wants guidance, step-by-step planning, or expresses uncertainty about paper structure. **Default rule**: when ambiguous between `plan` and `full`, prefer `plan`.
 
 > See `references/plan_mode_protocol.md` for full intent signals and activation rules.
+
+### Guided-Writing Mode Activation
+
+Activate `guided-writing` mode when the user wants AI as a writing mentor — guiding them through drafting section by section rather than producing a finished paper automatically.
+
+**Intent signals:**
+1. User explicitly asks for "guided writing", "write with me", "导师模式"
+2. User has a blueprint/plan and wants to draft with mentor support
+3. User wants to focus on argument quality rather than prose generation
+
+**Default rule**: When intent is ambiguous between `plan` and `guided-writing`, prefer `plan` if the user has no structure yet; prefer `guided-writing` if the user already knows what they want to write.
+
+> See `references/guided_mode_protocol.md` for the full 6-step mentor-guided drafting flow.
 
 ### Does NOT Trigger
 
@@ -360,7 +375,7 @@ See `agents/intake_agent.md` for the complete field definitions of the Phase 0 c
 
 **Templates** (11 files in `templates/`): `imrad`, `literature_review`, `case_study`, `theoretical_paper`, `policy_brief`, `conference_paper`, `latex_article_template.tex`, `bilingual_abstract`, `credit_statement`, `funding_statement`, `revision_tracking` (4 status types).
 
-**Examples** (9 files in `examples/`): `imrad_hei_example`, `literature_review_example`, `plan_mode_guided_writing`, `chinese_paper_example`, `revision_mode_example`, `revision_recovery_example`, `clinical_citation_verification_checklist`, `clinical_epistemic_status_example`, `version_family_reconciliation_example`.
+**Examples** (10 files in `examples/`): `imrad_hei_example`, `literature_review_example`, `plan_mode_guided_writing`, `guided_mode_example`, `chinese_paper_example`, `revision_mode_example`, `revision_recovery_example`, `clinical_citation_verification_checklist`, `clinical_epistemic_status_example`, `version_family_reconciliation_example`.
 
 ---
 
